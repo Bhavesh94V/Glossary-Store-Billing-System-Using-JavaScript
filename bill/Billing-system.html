@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            background: rgb(22, 150, 200);
+            background: radial-gradient(circle, rgba(22, 150, 200, 1) 0%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 100%);
+            color: white;
+        }
+
+        .sec-2 input {
+            max-height: 30px;
+        }
+
+        .sec-2 label {
+            font-size: 13px;
+            margin-left: 5px;
+        }
+
+        .sec-2 .bill-area {
+            margin-top: 4.5rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.226);
+        }
+
+        .sec-2 .grandtotal {
+            border-left: 1px solid rgba(255, 255, 255, 0.226);
+        }
+
+        .sec-2 .bill-area .details {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .sec-2 .bill-area .details h6 {
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        .sec-2 .bill-area .details label {
+            margin-right: 10px;
+            font-weight: 900;
+            font-size: 18px;
+        }
+
+        .sec-2 .bill-area .visit {
+            font-weight: normal;
+        }
+
+        .sec-2 .bill-area input {
+            border: none;
+            outline: none;
+            color: white;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="">
+        <div class="container text-center mb-5">
+            <h1 class="mt-3 text-white">Billing System</h1>
+        </div>
+        <hr>
+        <div class="container-fluid">
+            <form class="row">
+                <div class="mb-3 col">
+                    <label for="CustomerName" class="form-label">Customer Name</label>
+                    <input type="text" placeholder="Enter Customer Name" class="form-control" id="CustomerName"
+                        aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3 col">
+                    <label for="ContactNo" class="form-label">Contact No.</label>
+                    <input type="number" placeholder="Enter Contact No." class="form-control" id="ContactNo">
+                </div>
+                <div class="mb-3 col">
+                    <label for="BillNo" class="form-label">Bill No.</label>
+                    <input type="number" placeholder="Enter Bill No." class="form-control" id="BillNo">
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="container-fluid sec-2">
+            <div class="row">
+                <div class="col">
+                    <h3>Snacks</h3>
+                    <div class="mb-3 col">
+                        <label for="Choco-spred" class="form-label">Nutella Choco Spred</label>
+                        <input type="number" class="form-control" id="Choco-spred" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Noodle" class="form-label">Noodles (1 Pack)</label>
+                        <input type="number" class="form-control" id="Noodle">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="lays" class="form-label">Lays (10Rs.)</label>
+                        <input type="number" class="form-control" id="Lays">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="oreo" class="form-label">Oreo (20Rs.)</label>
+                        <input type="number" class="form-control" id="Oreo">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Muffins" class="form-label">Chocolate Muffins</label>
+                        <input type="number" class="form-control" id="Muffins">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Dairy-milk" class="form-label">Dairy Milk Silk (60Rs.)</label>
+                        <input type="number" class="form-control" id="Dairy-milk">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Namkeen" class="form-label">Namkeen (15Rs.)</label>
+                        <input type="number" class="form-control" id="Namkeen">
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Grocery</h3>
+                    <div class="mb-3 col">
+                        <label for="Atta" class="form-label">Ashirvaad Atta (1kg)</label>
+                        <input type="number" class="form-control" id="Atta" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Pasta" class="form-label">Pasta (1kg)</label>
+                        <input type="number" class="form-control" id="Pasta">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Basmati" class="form-label">Basmati Rice (1kg)</label>
+                        <input type="number" class="form-control" id="Basmati">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Sunflower" class="form-label">Sunflower Oil (1Ltr)</label>
+                        <input type="number" class="form-control" id="Sunflower">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Sugar" class="form-label">Refined Sugar (1Kg)</label>
+                        <input type="number" class="form-control" id="Sugar">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Daal" class="form-label">Daal (1Kg)</label>
+                        <input type="number" class="form-control" id="Daal">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Tea" class="form-label">Tea Powder</label>
+                        <input type="number" class="form-control" id="Tea">
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Beauty & Hygiene</h3>
+                    <div class="mb-3 col">
+                        <label for="Soap" class="form-label">Bathing Soap</label>
+                        <input type="number" class="form-control" id="Soap" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Shampoo" class="form-label">Shampoo (1ltr)</label>
+                        <input type="number" class="form-control" id="Shampoo">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Lotion" class="form-label">Body Lotion (1ltr)</label>
+                        <input type="number" class="form-control" id="Lotion">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="FaceCream" class="form-label">Face Cream</label>
+                        <input type="number" class="form-control" id="FaceCream" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="ShavingFoam" class="form-label">Shaving Foam</label>
+                        <input type="number" class="form-control" id="ShavingFoam">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="FaceMask" class="form-label">Face Mask (1 Piece)</label>
+                        <input type="number" class="form-control" id="FaceMask">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Sanitizer" class="form-label">Hand Sanitizer (50ml)</label>
+                        <input type="number" class="form-control" id="Sanitizer">
+                    </div>
+                </div>
+                <div class="col mb-auto bill-area">
+                    <div class="mb-3 col text-center">
+                        <h3 class="btn form-label text-white fs-4 w-100 bg-primary border-0">Bill Area</h3>
+                        <h6>WELCOME TO SUPER MARKET</h6>
+                    </div>
+                    <div class="mb-3 col details align-items-baseline">
+                        <label for="billNo" class="form-label">Bill No :</label>
+                        <input type="text" name="" id="billNo" disabled>
+                    </div>
+                    <div class="mb-3 col details align-items-baseline">
+                        <label for="customername" class="form-label">Customer Name :</label>
+                        <input type="text" name="" id="customername" disabled>
+                    </div>
+                    <div class="mb-3 col details align-items-baseline">
+                        <label for="Contactno" class="form-label">Phone No : </label>
+                        <input type="text" name="" id="Contactno" disabled>
+                    </div>
+                    <div class="mb-3 col mt-lg-5 visit text-center">
+                        <h5 id="Visit"></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container-fluid sec-2">
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3 col">
+                        <label for="total-snacks-price" class="form-label">Total Snacks Price</label>
+                        <input type="number" class="form-control" id="total-snacks-price">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="Grocery-Price" class="form-label">Total Grocery Price</label>
+                        <input type="number" class="form-control" id="Grocery-Price">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="TotalHygiene" class="form-label">total beauty</label>
+                        <input type="number" class="form-control" id="TotalHygiene">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3 col">
+                        <label for="SnacksTax" class="form-label">Total Snacks Tax</label>
+                        <input type="number" class="form-control" id="SnacksTax">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="GroceryTax" class="form-label">Total Grocery Tax</label>
+                        <input type="number" class="form-control" id="GroceryTax">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="BeautyTax" class="form-label">Total Beauty & Hygiene Price</label>
+                        <input type="number" class="form-control" id="BeautyTax">
+                    </div>
+                </div>
+                <div class="col grandtotal">
+                    <div class="mb-3 col text-center">
+                        <label for="GrandTotal" class="form-label fs-5 bg-primary badge rounded my-lg-3 ">Grand
+                            Total</label>
+                        <input type="text" class="form-control w-75 mx-auto" id="GrandTotal" disabled>
+                    </div>
+                    <div class="col text-center my-lg-4">
+                        <button class="btn bg-primary text-white"
+                            onclick="Snacks(),Grocery(),Hygiene(),GrandTotaL(),BillArea()">Total
+                            Bill</button>
+                        <div class="btn bg-primary text-white mx-lg-3" id="clr">Clear</div>
+                        <div class="btn bg-primary text-white ">Exit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // var cme = document.querySelector("#clr");
+        // cme.addEventListener("click", clearMe);
+
+        // function clearMe() {
+        //     gw.value = "";
+        // }
+        function Snacks() {
+
+            var nutella = 160;
+            var noodle = 20;
+            var lays = 10;
+            var oreo = 10;
+            var muffins = 40;
+            var dairy = 60;
+            var namkeen = 15;
+
+            var first = document.getElementById("Choco-spred").value;
+            first = nutella * first;
+
+            var sec = document.getElementById("Noodle").value;
+            sec = noodle * sec;
+
+            var third = document.getElementById("Lays").value;
+            third = lays * third;
+
+            var fourth = document.getElementById("Oreo").value;
+            fourth = oreo * fourth;
+
+            var five = document.getElementById("Muffins").value;
+            five = muffins * five;
+
+            var six = document.getElementById("Dairy-milk").value;
+            six = dairy * six;
+
+            var seven = document.getElementById("Namkeen").value;
+            seven = namkeen * seven;
+
+            var total1 = 0;
+            total1 = total1 + parseFloat(first) + parseFloat(sec) + parseFloat(third) + parseFloat(fourth) + parseFloat(five) + parseFloat(six) + parseFloat(seven);
+
+            // document.getElementById("GrandTotal").value = total1;
+            document.getElementById("total-snacks-price").value = total1;
+
+            var tax;
+            tax = 0.12 * total1;
+            document.getElementById("SnacksTax").value = tax;
+
+            var gt1 = total1 + tax;
+            return gt1;
+        }
+
+        function Grocery() {
+
+            var atta = 35;
+            var pasta = 20;
+            var basmati = 40;
+            var sunflower = 200;
+            var sugar = 50;
+            var daal = 60;
+            var tea = 150;
+
+            var first = document.getElementById("Atta").value;
+            first = atta * first;
+
+            var sec = document.getElementById("Pasta").value;
+            sec = pasta * sec;
+
+            var third = document.getElementById("Basmati").value;
+            third = basmati * third;
+
+            var fourth = document.getElementById("Sunflower").value;
+            fourth = sunflower * fourth;
+
+            var five = document.getElementById("Sugar").value;
+            five = sugar * five;
+
+            var six = document.getElementById("Daal").value;
+            six = daal * six;
+
+            var seven = document.getElementById("Tea").value;
+            seven = tea * seven;
+
+            var total2 = 0;
+            total2 = total2 + parseFloat(first) + parseFloat(sec) + parseFloat(third) + parseFloat(fourth) + parseFloat(five) + parseFloat(six) + parseFloat(seven);
+
+            // document.getElementById("GrandTotal").value = total2;
+            document.getElementById("Grocery-Price").value = total2;
+
+            var tax;
+            tax = 0.15 * total2;
+            document.getElementById("GroceryTax").value = tax;
+
+            var gt2 = total2 + tax;
+            return gt2;
+        }
+        function Hygiene() {
+
+            var soap = 10;
+            var shampoo = 200;
+            var lotion = 30;
+            var faceCream = 120;
+            var shavingFoam = 40;
+            var faceMask = 20;
+            var sanitizer = 75;
+
+            var first = document.getElementById("Soap").value;
+            first = soap * first;
+
+            var sec = document.getElementById("Shampoo").value;
+            sec = shampoo * sec;
+
+            var third = document.getElementById("Lotion").value;
+            third = lotion * third;
+
+            var fourth = document.getElementById("FaceCream").value;
+            fourth = faceCream * fourth;
+
+            var five = document.getElementById("ShavingFoam").value;
+            five = shavingFoam * five;
+
+            var six = document.getElementById("FaceMask").value;
+            six = faceMask * six;
+
+            var seven = document.getElementById("Sanitizer").value;
+            seven = sanitizer * seven;
+
+            var total3 = 0;
+            total3 = total3 + parseFloat(first) + parseFloat(sec) + parseFloat(third) + parseFloat(fourth) + parseFloat(five) + parseFloat(six) + parseFloat(seven);
+
+            document.getElementById("TotalHygiene").value = total3;
+
+            var tax;
+            tax = 0.18 * total3;
+            document.getElementById("BeautyTax").value = tax;
+
+            var gt3 = total3 + tax;
+            return gt3;
+
+        }
+        function GrandTotaL() {
+            var result = Snacks() + Grocery() + Hygiene();
+
+            document.getElementById("GrandTotal").value = result;
+        }
+        function BillArea() {
+            var PhNo = document.getElementById("ContactNo").value
+            document.getElementById("Contactno").value = PhNo;
+
+            var Bill = document.getElementById("BillNo").value
+            document.getElementById("billNo").value = Bill;
+
+            var custname = document.getElementById("CustomerName").value
+            document.getElementById("customername").value = custname;
+
+            var Visit = document.getElementById("Visit").value
+            document.getElementById("Visit").innerHTML = 'Thanks For Shopping! Visit Again...';
+        }
+    </script>
+</body>
+
+</html>
